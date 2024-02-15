@@ -1,0 +1,138 @@
+#Doctors {
+  color: white;
+  background-color: black;
+  background-image: url("IMAGES/back2.jpeg");
+  background-size: cover;
+  padding: 50px 0px;
+  position: relative;
+}
+
+#Doctors::before {
+  background: rgba(52, 73, 94, 0.5);
+  content: "";
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.Doctors img {
+  border-radius: 50%;
+}
+/* nav ul li {
+  scroll-behavior: smooth;
+} */
+
+.news-post img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.news-post h3 {
+  font-size: 1.35rem;
+}
+
+.news-post h3 a {
+  color: #34495e;
+}
+
+.post-date {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+a.readmore {
+  color: #34495e;
+}
+
+#footer-sidebar {
+  color: white;
+  background: #014e78;
+  padding: 20px 0px;
+}
+
+.footer-widget h4::after {
+  content: "";
+  background: #fff;
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 5px 0px;
+}
+
+.footer-widget a {
+  color: #fff;
+}
+
+.latest-news {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.latest-news li {
+  margin-bottom: 3px;
+}
+
+.latest-news li::before {
+  padding-right: 5px;
+}
+
+#footer {
+  color: #fff;
+  background: rgb(20, 100, 120);
+  padding: 10px 0;
+}
+
+#social-icons {
+  list-style: none;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+#social-icons li {
+  display: inline-block;
+  padding-left: 5px;
+}
+
+#social-icons {
+  color: #fff;
+  font-size: 23px;
+}
+
+@media (max-width: 768px) {
+  #logo {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  #menu {
+    text-align: center;
+  }
+
+  .Doctors {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .sevice-box {
+    margin-bottom: 30px;
+  }
+
+  .news-post {
+    margin-bottom: 30px;
+  }
+
+  .footer-widget {
+    margin-bottom: 20px;
+  }
+
+  #footer {
+    text-align: center;
+  }
+
+  #social-icons {
+    margin-top: 10px;
+  }
+}

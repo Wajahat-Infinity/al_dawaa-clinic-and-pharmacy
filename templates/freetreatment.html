@@ -1,0 +1,128 @@
+{% include "header.html" %}
+<!DOCTYPE html>
+<html>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #34495E;
+      {% comment %} background-image: url('data:image/jpeg;base64,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');
+      background-size: cover; {% endcomment %}
+      
+    "
+  >
+    <div
+      style="
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finstitutosegurancaprivada.com.br%2Fwp-content%2Fuploads%2F2019%2F06%2Fhospital-website-background-7.jpg&f=1&nofb=1&ipt=9bf4b4149721858785ac95348bb1f8b14243991cc4cdab100074f09f01d15d79&ipo=images');
+        background-size: cover;
+      "
+    >
+      <h1 style="text-align: center; margin-bottom: 30px; color: #446688">
+        Free Hospital Treatment Form
+      </h1>
+
+      <form style="max-width: 500px; margin: 0 auto">
+        <label
+          for="name"
+          style="display: block; margin-bottom: 10px; font-weight: bold"
+          >Name:</label
+        >
+        <input
+          type="text"
+          id="name"
+          name="name"
+          style="
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+          "
+        />
+
+        <label
+          for="email"
+          style="display: block; margin-bottom: 10px; font-weight: bold"
+          >Email:</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          style="
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+          "
+        />
+
+        <label
+          for="phone"
+          style="display: block; margin-bottom: 10px; font-weight: bold"
+          >Phone Number:</label
+        >
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          style="
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+          "
+        />
+
+        <label
+          for="symptoms"
+          style="display: block; margin-bottom: 10px; font-weight: bold"
+          >Symptoms:</label
+        >
+        <textarea
+          id="symptoms"
+          name="symptoms"
+          style="
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+          "
+        ></textarea>
+
+        <button
+          type="submit"
+          style="
+            background-color: #446688;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          "
+        >
+          Submit
+        </button>
+      </form>
+      <br />
+      <br />
+      <br />
+    </div>
+  </body>
+</html>
+{% include "footer.html" %}

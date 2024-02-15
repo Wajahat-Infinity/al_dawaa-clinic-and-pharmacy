@@ -1,0 +1,271 @@
+{% include "header.html" %}
+    <div id="displayText"></div>
+    <div id="banner" class="py-5" style="
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finstitutosegurancaprivada.com.br%2Fwp-content%2Fuploads%2F2019%2F06%2Fhospital-website-background-7.jpg&f=1&nofb=1&ipt=9bf4b4149721858785ac95348bb1f8b14243991cc4cdab100074f09f01d15d79&ipo=images');
+    background-size: cover;
+  ">
+      <div class="container" id="about">
+        <div class="row">
+          <div class="col-md-8 col-lg-6">
+            <div class="banner-title">
+              <h1 class="title">OVERVIEW</h1>
+              <p class="lead">
+              {{overview}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container section" id="services">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="section-head">Departments/Clinics</h2>
+        </div>
+        {% for n in deptList %} <div class="col-md-3">
+          <div
+            class="sevice-box"
+            style="font-size: 50px; text-align: center; color: #34495e"
+          >
+            <i class="{{n.icon}}"></i>
+            <h3>{{n.name}}</h3>
+          </div>
+        </div>{% endfor %}
+        {% comment %} <div class="col-md-3">
+          <div
+            class="sevice-box"
+            style="font-size: 50px; text-align: center; color: #34495e"
+          >
+            <i class="bi bi-eye"></i>
+            <h3>Ophthalmologist</h3>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div
+            class="sevice-box"
+            style="font-size: 50px; text-align: center; color: #34495e"
+          >
+            <i class="bi bi-heart-pulse-fill"></i>
+            <h3>Cardiologist</h3>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div
+            class="sevice-box"
+            style="
+              font-size: 50px;
+              text-align: center;
+              color: #34495e;
+              margin-bottom: 30px;
+            "
+          >
+            <i class="bi bi-calendar2-plus-fill"></i>
+            <h3>Online appointment</h3>
+          </div>
+        </div> {% endcomment %}
+      </div>
+    </div>
+    <div id="Doctors" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="section-head text-white">DOCTORS</h2>
+          </div>
+
+          <div class="col-md-6">
+            <div class="Doctors">
+              <p>Best Doctors in AL-AHMED Hospital</p>
+              <div class="row">
+                <div class="col-md-2">
+                  <img src="static/images/dr.jpg" alt="" width="50" height="50" />
+                </div>
+                <div class="col-md-10">
+                  <div class="person">Dr,WAJAHAT HUSSAIN</div>
+                  <div class="person-profession">Founder and C.E.O.</div>
+                </div>
+              </div>
+              Softwarelogist
+              <p>Fee:Rs:12345.0</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="Doctors">
+              <p></p>
+              <div class="row">
+                <div class="col-md-2">
+                  <img src="static/images/dr2.jpg" alt="" width="50" height="50" />
+                </div>
+                <div class="col-md-10">
+                  <div class="person">Dr,ABC</div>
+                  <div class="person-profession">Dept.Head</div>
+                </div>
+              </div>
+              Cardiologist
+              <p>Fee:Rs:12345.0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container section" id="news">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="section-head">News/Annoncement</h2>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="news-post">
+            <img src="static/IMAGES/camp1 (2).jpg" alt="" width="200" height="150" />
+            <h3><a href="">CAMP AT GASSING</a></h3>
+            <div class="post-date">
+              <i class="bi bi-calendar-event"></i> April 22,2002
+            </div>
+            <p>
+              Dr.GHULAM HASSAN eye-specialist is visiting at Boys high school
+              GASSING
+            </p>
+            <a href="" class="readmore"
+              >Read More
+              <i class="bi bi-chevron-double-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="news-post">
+            <img src="static/IMAGES/camp1 (1).jpg" alt="" width="200" height="150" />
+            <h3><a href="">Registration for volentors</a></h3>
+            <div class="post-date">
+              <i class="bi bi-calendar-event"></i> April 22,2002
+            </div>
+            <p>
+              On above date we are going to organize a medical-camp at Gassing
+              any volunters who know about medical or belong to this field,can
+              be register him before the date...
+            </p>
+            <a href="" class="readmore"
+              >Read More
+              <i class="bi bi-chevron-double-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="news-post">
+            <img src="static/IMAGES/Training.jpg" alt="" width="200" height="150" />
+            <h3><a href="">TRAINING</a></h3>
+
+            <div class="post-date">
+              <i class="bi bi-calendar-event"></i> Augest 10,2022
+            </div>
+            <p>
+              Seven day workshop for the doctors in AL-AHMED Hospital has
+              arranged with the collaboration ALKHIDMAT WELFARE SOCIETY
+            </p>
+            <a href="" class="readmore"
+              >Read More
+              <i class="bi bi-chevron-double-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="news-post">
+            <img src="static/IMAGES/football.jpg" alt="" width="200" height="150" />
+            <h3><a href="">Healthy Activity</a></h3>
+            <div class="post-date">
+              <i class="bi bi-calendar-event"></i> June 15,2022
+            </div>
+            <p>
+              For the purpose of some relief and refreshment for the Doctors &
+              Staff , we organized an event of football on this holoday.
+            </p>
+            <a href="" class="readmore"
+              >Read More<i class="bi bi-chevron-double-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="footer-sidebar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="footer-widget">
+              <h4>About Hospital</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Numquam, provident!
+              </p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="footer-widget">
+              <h4>Latest News</h4>
+              <ul class="latest-news">
+                <li>
+                  <a href="">
+                    <i class="bi bi-chevron-double-right"></i> Lorem ipsum dolor
+                    sit amet.</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <i class="bi bi-chevron-double-right"></i> Lorem ipsum dolor
+                    sit amet.</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <i class="bi bi-chevron-double-right"></i> Lorem ipsum dolor
+                    sit amet.</a
+                  >
+                </li>
+                <li>
+                  <a href="">
+                    <i class="bi bi-chevron-double-right"></i> Lorem ipsum dolor
+                    sit amet.</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="footer-widget">
+              <h4>Hospital Address</h4>
+              <address>
+                <b>AL-AHMED HOSPITAL AND PHARMACY,</b>
+                <br />House 786,Olding Skardu.<br />
+                P : (+92)34 23456740
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   {%  include "footer.html"%}
+    <!-- <script src="jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#about").click(function () {
+          event.preventDefault(); // Prevent the default link behavior
+          var textToDisplay =
+            "Aslam e Allekum ha ji hamere bare me jan ke ka karo ge";
+
+          $(".lead").text(textToDisplay); -->
+
+           {% comment %} window.open("", "_blank").document.write("Hello, new window!");
+           $("#about").text("You clicked the link!"); {% endcomment %}
+        {% comment %} });
+      });
+    </script> {% endcomment %}
+  </body>
+</html>

@@ -1,0 +1,102 @@
+#section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-size: 50px;
+}
+
+.section h2.section-head {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section h2.section-head::after {
+  background: #34495e;
+  content: "";
+  display: block;
+  width: 400px;
+  height: 3px;
+  margin: 20px auto;
+}
+
+a:hover {
+  text-decoration: none;
+  font-size: 70%;
+}
+
+#header {
+  color: #fff;
+  background: #34495e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#icon {
+  font-size: 2rem;
+  margin-top: 5px;
+}
+
+#menu {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+}
+
+#menu li {
+  display: inline-block;
+}
+
+#menu li a {
+  color: #fff;
+  padding: 15px 10px;
+  display: block;
+}
+
+#menu li a:hover {
+  background-color: #2c3e50;
+}
+
+#banner {
+  /* background-image: url("static/IMAGES/back2.jpeg"); */
+  background: url("https://1.bp.blogspot.com/-BGl5P4ytQGg/XyR1C0XbSnI/AAAAAAAABqY/fpFbIcxoJ_k7yn-P-r5J6mkzXywS6TAZQCLcBGAsYHQ/s0/hospital-website-design-showcase.pngz")
+    no-repeat 0 0;
+  background-size: cover;
+}
+
+.banner-title {
+  padding: 1rem;
+}
+
+.banner-title h1 {
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: 10px;
+  margin: 0%;
+}
+
+.banner-title p.lead {
+  color: #fff;
+  background-color: rgba(52, 73, 94, 0.8);
+  display: inline-block;
+  padding: 10px;
+  margin: 0%;
+}
+
+.sevice-box {
+  text-align: center;
+  width: 400px;
+  color: #fff;
+  font-size: 50px;
+}
+
+/* .sevice-box i.bi {
+    color: #fff;
+
+    color: #34495e;
+    font-size: 700px;
+    margin-bottom: 15px;
+
+} */
