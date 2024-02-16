@@ -26,7 +26,8 @@ urlpatterns = [
     path('contact/', views.contact),
     path('contact/<ph>/', views.contactNum),
     path('free-treatment', views.freeTreatment),
-    path('contact', views.contact),
+    path('services', views.services),
+    path('news', views.news),
 
 
 

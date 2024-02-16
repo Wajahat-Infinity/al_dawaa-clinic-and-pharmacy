@@ -41,3 +41,13 @@ def contact(request):
                         'title':'Al-Dawaa',
                     }
                     return render(request,"contact.html",data)
+def services(request):
+                    data={
+                        'title':'Al-Dawaa',
+                    }
+                    return render(request,"services.html",data)
+def news(request):
+                    data={
+                        'title':'Al-Dawaa',
+                    }
+                    return render(request,"news.html",data)
