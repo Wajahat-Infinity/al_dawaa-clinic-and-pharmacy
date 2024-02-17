@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="\static\bootstrap.css" />
-    <link rel="stylesheet" href="\static\style.css" />
+    <link rel="stylesheet" href="\static\style0.css" />
     <link rel="stylesheet" href="\static\style2.css" />
 
     <link
@@ -25,12 +25,36 @@
           </div>
           <div class="col-lg-8">
             <ul id="menu" class="float-md-right">
-              <li id="home"><a href="/">Home</a></li>
-              <li id="about"><a href="/about-us">ABOUT US</a></li>
-              <li><a href="/services">SERVICES</a></li>
-              <li><a href="/contact">CONTACT</a></li>
-              <li><a href="/news">NEWS</a></li>
-              <li><a href="/free-treatment">Free Treatment</a></li>
+              <li
+                class="{% if request.path == '/' %} active {% endif %}"
+                id="home"
+              >
+                <a href="/">Home</a>
+              </li>
+              <li
+                class="{% if request.path == '/about-us/' %} active {% endif %}"
+                id="about"
+              >
+                <a href="/about-us/">ABOUT US</a>
+              </li>
+              <li
+                class="{% if request.path == '/services' %} active {% endif %}"
+              >
+                <a href="/services">SERVICES</a>
+              </li>
+              <li
+                class="{% if request.path == '/contact/' %} active {% endif %}"
+              >
+                <a href="/contact/">CONTACT</a>
+              </li>
+              <li class="{% if request.path == '/news' %} active {% endif %}">
+                <a href="/news">NEWS</a>
+              </li>
+              <li
+                class="{% if request.path == '/free-treatment' %} active {% endif %}"
+              >
+                <a href="/free-treatment">Free Treatment</a>
+              </li>
             </ul>
           </div>
         </div>

@@ -32,7 +32,8 @@
         Free Hospital Treatment Form
       </h1>
 
-      <form style="max-width: 500px; margin: 0 auto">
+      <form style="max-width: 500px; margin: 0 auto" method="post">
+        {% csrf_token %}
         <label
           for="name"
           style="display: block; margin-bottom: 10px; font-weight: bold"
@@ -42,6 +43,7 @@
           type="text"
           id="name"
           name="name"
+          value="{{name}}"
           style="
             width: 100%;
             padding: 10px;
@@ -61,6 +63,7 @@
           type="email"
           id="email"
           name="email"
+          value="{{email}}"
           style="
             width: 100%;
             padding: 10px;
@@ -107,6 +110,26 @@
             margin-bottom: 20px;
           "
         ></textarea>
+        <div>
+          <fieldset>
+            <legend>Gender:</legend>
+            <label for="option1">Male</label>
+            <input type="radio" id="option1" name="option" value="Male" />
+            <label for="option2">Female</label>
+            <input type="radio" id="option2" name="option" value="Female" />
+            <label for="option3">Others</label>
+            <input type="radio" id="option3" name="option" value="Other" />
+          </fieldset>
+        </div>
+        <div>
+          <fieldset>
+            <legend>Income:</legend>
+            <label for="option1">Less then 10000</label>
+            <input type="radio" id="option1" name="option" value=">10000" />
+            <label for="option2">greater then 10000</label>
+            <input type="radio" id="option2" name="option" value="=>10000" />
+          </fieldset>
+        </div>
 
         <button
           type="submit"

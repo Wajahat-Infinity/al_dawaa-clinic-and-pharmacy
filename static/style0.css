@@ -17,11 +17,15 @@
   width: 400px;
   height: 3px;
   margin: 20px auto;
+  text-decoration: none;
 }
 
 a:hover {
   text-decoration: none;
   font-size: 70%;
+}
+.active a {
+  background-color: rgb(33, 77, 152);
 }
 
 #header {

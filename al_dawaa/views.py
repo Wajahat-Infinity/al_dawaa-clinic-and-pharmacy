@@ -26,16 +26,7 @@ def contact(request):
 def contactNum(request,ph):                
                     return HttpResponse(ph)
                     
-def freeTreatment(request):
-                    data={
-                    'title':'Al-Dawaa',
-                    'overview':'Our mission is to diagnose of disease and its treatment like other hospitals along these, our HOSPITAL gives free treatment and medicine for needy and helpless people.We also keep medical-camps along with our team and well qualified doctors and experts in differnt hard and remote areas ,where normally basic medical facilities are not available. We feel pleasure by doing our work',
-                    'deptList':[{'name':'General Physician' , 'icon':'bi bi-capsule'},
-                                {'name':'Ophthalmologist' , 'icon':'bi bi-eye'},
-                                {'name':'Cardiologist' , 'icon':'bi bi-heart-pulse-fill'},
-                                {'name':'Online appointment' , 'icon':'bi bi-calendar2-plus-fill'},],
-                }                
-                    return render(request,"freetreatment.html",data)
+
 def contact(request):
                     data={
                         'title':'Al-Dawaa',
@@ -51,3 +42,21 @@ def news(request):
                         'title':'Al-Dawaa',
                     }
                     return render(request,"news.html",data)
+def freeTreatment(request):
+                    
+                    data={},
+                    try:
+                            if(request.method == "POST"):
+                                    name=request.POST.get('name');
+                                    email=request.POST.get('email');
+                                    print(name + email);
+                    except:
+                                    pass
+
+                    data={
+                    'title':'Al-Dawaa',
+                    'name':name,
+                    'email':email,
+
+                     } 
+                    return render(request,"freetreatment.html",data)
