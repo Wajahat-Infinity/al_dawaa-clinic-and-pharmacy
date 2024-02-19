@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 def homePage(request):
                 data={
@@ -50,13 +50,28 @@ def freeTreatment(request):
                                     name=request.POST.get('name');
                                     email=request.POST.get('email');
                                     print(name + email);
+                                    data={
+                                                'title':'Al-Dawaa',
+                                                'name':name,
+                                                'email':email
+
+                                    } 
+                                    url="subFreeTreatmentform/?name={}".format(name)
+
+                                    return HttpResponseRedirect(url)
                     except:
                                     pass
 
-                    data={
-                    'title':'Al-Dawaa',
-                    'name':name,
-                    'email':email,
+                   
+                    return render(request,"freetreatment.html")
 
-                     } 
-                    return render(request,"freetreatment.html",data)
+
+def subFreeTreatmentform(request):
+                   
+                    if request.method == 'GET':
+                        name=request.GET.get('name')
+                    data={
+                        'title':'Al-Dawaa',
+                        'name':name,
+                    }
+                    return render(request,"subFreeTreatmentform.html",data)

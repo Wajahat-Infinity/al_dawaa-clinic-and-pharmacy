@@ -28,6 +28,8 @@ urlpatterns = [
     path('free-treatment', views.freeTreatment),
     path('services', views.services),
     path('news', views.news),
+    path('subFreeTreatmentform/', views.subFreeTreatmentform),
+
 
 
 
