@@ -29,6 +29,8 @@ urlpatterns = [
     path('services', views.services),
     path('news', views.news),
     path('subFreeTreatmentform/', views.subFreeTreatmentform),
+    # path('subFreeTreatmentform/', views.homeHeader),
+
 
 
 

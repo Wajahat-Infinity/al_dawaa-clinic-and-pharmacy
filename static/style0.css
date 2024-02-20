@@ -69,6 +69,13 @@ a:hover {
     no-repeat 0 0;
   background-size: cover;
 }
+.secondary-header {
+  top: 80px; /* Adjust based on your main header's height */
+}
+
+.secondary-header .container-fluid {
+  padding-top: 1rem; /* Adjust as needed to create spacing below the header */
+}
 
 .banner-title {
   padding: 1rem;

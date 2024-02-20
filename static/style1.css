@@ -82,6 +82,7 @@ a.readmore {
   color: #fff;
   background: rgb(20, 100, 120);
   padding: 10px 0;
+  margin-top: 4%;
 }
 
 #social-icons {
@@ -135,4 +136,10 @@ a.readmore {
   #social-icons {
     margin-top: 10px;
   }
+}
+#subHeader {
+  color: #16861a;
+  background: rgb(1, 28, 35);
+  padding: 10px 0;
+  margin-top: 4%;
 }
