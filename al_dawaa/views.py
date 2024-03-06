@@ -47,18 +47,22 @@ def freeTreatment(request):
                     data={},
                     try:
                             if(request.method == "POST"):
-                                    name=request.POST.get('name');
-                                    email=request.POST.get('email');
-                                    print(name + email);
-                                    data={
+                                     name=request.POST.get('name');
+                                     email=request.POST.get('email');
+                                     if name == "":
+                                                    return render(request,"freetreatment.html",{'error' : True})
+                                     else:    
+                                                    url="subFreeTreatmentform/?name={}".format(name)
+
+                            return HttpResponseRedirect(url)  
+                            data={
                                                 'title':'Al-Dawaa',
                                                 'name':name,
                                                 'email':email
 
                                     } 
-                                    url="subFreeTreatmentform/?name={}".format(name)
-
-                                    return HttpResponseRedirect(url)
+                            
+                                               
                     except:
                                     pass
 
