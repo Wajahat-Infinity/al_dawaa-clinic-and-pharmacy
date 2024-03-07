@@ -1,5 +1,4 @@
-{% extends "base.html" %} {% block content %}
-<!DOCTYPE html>
+{% extends "base.html" %} {% block content %} {% comment %} <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -75,4 +74,121 @@
     </div>
   </body>
 </html>
+{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital System Services</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      /* Add custom styles here */
+      .service-card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5 mb-4">Our Services</h1>
+      <div class="row">
+        <!-- Service Card 1 -->
+        <div class="col-md-4">
+          <div class="service-card">
+            <h3 class="text-primary">
+              <i class="fas fa-ambulance"></i> Emergency Care
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
+              lectus purus.
+            </p>
+          </div>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="col-md-4">
+          <div class="service-card">
+            <h3 class="text-success">
+              <i class="fas fa-clinic-medical"></i> Specialty Clinics
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
+              lectus purus.
+            </p>
+          </div>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="col-md-4">
+          <div class="service-card">
+            <h3 class="text-danger">
+              <i class="fas fa-procedures"></i> Surgical Services
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
+              lectus purus.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Service Card 4 -->
+        <div class="col-md-4">
+          <div class="service-card">
+            <h3 class="text-warning">
+              <i class="fas fa-wheelchair"></i> Rehabilitation
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
+              lectus purus.
+            </p>
+          </div>
+        </div>
+        <!-- Service Card 5 -->
+        <div class="col-md-4">
+          <div class="service-card">
+            <h3 class="text-info">
+              <i class="fas fa-flask"></i> Laboratory Services
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
+              lectus purus.
+            </p>
+          </div>
+        </div>
+        <!-- Service Card 6 -->
+        <div class="col-md-4">
+          <div class="service-card">
+            <h3 class="text-secondary">
+              <i class="fas fa-x-ray"></i> Radiology
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
+              lectus purus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
 {% endblock %}
