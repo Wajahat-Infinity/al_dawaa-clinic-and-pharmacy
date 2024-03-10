@@ -5,106 +5,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Hospital Name</title>
+    <title>About Us - Hospital System</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
     <style>
-      /* Basic styles */
+      /* Add custom styles here */
       body {
-        font-family: sans-serif;
-        margin: 5%;
-        padding: 0;
-      }
-      h1,
-      h2,
-      h3 {
-        font-weight: bold;
-        margin-bottom: 1rem;
-      }
-      p {
-        margin-bottom: 0.5rem;
-      }
-      a {
-        color: #007bff;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-
-      /* Hero section */
-      .hero {
-        background-image: url("https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F136949.jpg&f=1&nofb=1&ipt=0e9324a4a31eff27902e393515022c886708c2e25de0e9fe7c38c0381a3d0cf5&ipo=images");
         background-size: cover;
         background-position: center;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        color: #333;
       }
-      .hero h1 {
-        color: white;
-        font-size: 3rem;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      .about-section {
+        padding: 100px 0;
       }
-
-      /* Main content */
-      .main {
-        padding: 2rem;
+      .about-content {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Semi-transparent background color */
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow */
       }
-      .services {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+      .about-content h2 {
+        color: #333;
+        margin-bottom: 30px;
       }
-      .service {
-        padding: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        text-align: center;
+      .about-content p {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 20px;
       }
-
-      /* Footer */
-      .footer {
-        background-color: #f1f1f1;
-        text-align: center;
-        padding: 1rem;
+      .team-member {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Semi-transparent background color */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow */
+        margin-bottom: 20px;
+      }
+      .team-member img {
+        border-radius: 50%;
+        max-width: 100px;
+        border: 3px solid #fff;
+      }
+      .team-member h3 {
+        margin-top: 15px;
       }
     </style>
   </head>
   <body>
-    <header class="hero">
-      <h1>Al Dawaa</h1>
-    </header>
-
-    <main class="main">
-      <h2>Welcome to Your Hospital</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam
-        lectus. Nam eget consectetur velit...
-      </p>
-
-      <section class="services">
-        <div class="service">
-          <h3>Cardiology</h3>
-          <p>We offer advanced diagnostic and treatment options...</p>
-          <a href="#">Learn more</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="about-section text-center">
+            <h1 class="mb-4">About Our Hospital</h1>
+            <div class="about-content">
+              <h2>Welcome to Our Hospital</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                convallis mauris et felis volutpat, sed volutpat dui posuere.
+                Vestibulum eget orci et ante luctus fringilla ac id sapien. Cras
+                nec dictum nunc. Sed et dictum ligula. Integer eu purus eget
+                velit luctus efficitur. Morbi euismod ligula id eros aliquet,
+                nec posuere lorem luctus. Duis ac turpis nec ipsum vestibulum
+                tristique et eget libero. Curabitur non tellus justo. Nullam vel
+                tincidunt lacus.
+              </p>
+              <p>
+                Mauris ac mauris sapien. Nulla varius felis non eros tristique,
+                ut congue sapien venenatis. Proin quis accumsan elit. Ut euismod
+                odio vel nisi faucibus, in vehicula dui sodales. Sed consequat
+                mi at purus accumsan eleifend. Suspendisse nec bibendum nisi.
+                Vivamus bibendum interdum lectus at sollicitudin.
+              </p>
+              <p>
+                Quisque pretium interdum justo, at finibus nulla laoreet eget.
+                Nulla pharetra quam non justo commodo, in fermentum eros
+                sodales. In vitae mauris id mauris viverra vehicula. Vestibulum
+                ante ipsum primis in faucibus orci luctus et ultrices posuere
+                cubilia curae; Integer auctor placerat suscipit.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="service">
-          <h3>Neurology</h3>
-          <p>Our team of specialists provides comprehensive care...</p>
-          <a href="#">Learn more</a>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center mt-5">
+            <h2>Meet Our Team</h2>
+          </div>
         </div>
-        <div class="service">
-          <h3>Oncology</h3>
-          <p>Dedicated to compassionate cancer care...</p>
-          <a href="#">Learn more</a>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div class="team-member text-center">
+            <img
+              src="/static/images/dr.jpg"
+              alt="Team Member"
+              class="img-fluid"
+            />
+            <h3>Dr. Ali</h3>
+            <p>Cardiologist</p>
+          </div>
         </div>
-      </section>
-    </main>
+        <div class="col-md-3">
+          <div class="team-member text-center">
+            <img
+              src="/static/images/dr2.jpg"
+              alt="Team Member"
+              class="img-fluid"
+            />
+            <h3>Dr. waju</h3>
+            <p>Neurologist</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-member text-center">
+            <img
+              src="/static/images/dr2.jpg"
+              alt="Team Member"
+              class="img-fluid"
+            />
+            <h3 >Dr. hussain</h3>
+            <p>Surgeon</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    {% comment %}
-    <footer class="footer">{% include "footer.html" %}</footer>
-    {% endcomment %}
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
+
 {% endblock %}

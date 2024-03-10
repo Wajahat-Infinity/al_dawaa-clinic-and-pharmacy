@@ -1,5 +1,6 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
+from services.models import service
 def homePage(request):
                 data={
                     'title':'Al-Dawaa',
@@ -33,8 +34,12 @@ def contact(request):
                     }
                     return render(request,"contact.html",data)
 def services(request):
+                    serviceData=service.objects.all()
+                    
                     data={
                         'title':'Al-Dawaa',
+                        'serviceData':serviceData,
+
                     }
                     return render(request,"services.html",data)
 def news(request):
