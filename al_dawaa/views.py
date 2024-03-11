@@ -34,7 +34,7 @@ def contact(request):
                     }
                     return render(request,"contact.html",data)
 def services(request):
-                    serviceData=service.objects.all()
+                    serviceData=service.objects.all()[:6]
                     
                     data={
                         'title':'Al-Dawaa',
