@@ -1,80 +1,5 @@
-{% extends "base.html" %} {% block content %} {% comment %} <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hospital Services</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f5f5f5;
-      }
+{% extends "base.html" %} {% block content %} 
 
-      h1 {
-        font-size: 2.5em;
-        margin-bottom: 1px;
-        text-align: center;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-        margin: 10px;
-      }
-      .services-container {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 10px;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-      }
-      .service {
-        width: 28%;
-        background-color: #fff;
-        border-radius: 6px;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1),
-          0 1px 3px 0 rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        text-align: center;
-      }
-      .service h2 {
-        font-size: 1.5em;
-        color: #446688;
-        margin-bottom: 20px;
-      }
-      .service p {
-        font-size: 0.9em;
-        color: #333;
-        margin-bottom: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Our Services</h1>
-
-    <div class="services-container">
-      <div class="service">
-        <h2>Cardiology</h2>
-        <p>
-          Comprehensive cardiology services, from diagnostic tests to
-          interventional procedures.
-        </p>
-      </div>
-      <div class="service">
-        <h2>Orthopedics</h2>
-        <p>
-          Both surgical and non-surgical treatments for various musculoskeletal
-          conditions.
-        </p>
-      </div>
-      <div class="service">
-        <h2>Neurology</h2>
-        <p>
-          Specializing in treating conditions affecting the nervous system, such
-          as stroke, epilepsy, and multiple sclerosis.
-        </p>
-      </div>
-    </div>
-  </body>
-</html>
-{% endcomment %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -107,6 +32,28 @@
     <div class="container">
       <h1 class="text-center mt-5 mb-4">Our Services</h1>
       <div class="row">
+        <!-- Search Bar -->
+
+        <div class="col-md-5 mb-3">
+          <form method="get" >
+            <div class="row">
+            <div class="col-md-9">
+          <input 
+            type="text"
+            name="servicename"
+            id="searchInput"
+            class="form-control"
+            placeholder="Search services..."
+            value=""
+          /></div>
+          
+         <div class="col-md-3"> <input type="submit" value="search"/></div></div>
+          </form>
+        </div></div>
+        <div class="row">
+
+        <!-- Service Cards -->
+
         <!-- Service Card 1 -->
         {% for n in serviceData %}
         <div class="col-md-4">
@@ -114,81 +61,52 @@
             <h3 class="text-primary">
               <i class="{{n.service_icon}}"></i> {{n.service_title}}
             </h3>
-            <p>{{n.service_des }}</p>
+            <p>{{n.service_des|safe }}</p>
           </div>
         </div>
-        {% endfor %} {% comment %}
-        <!-- Service Card 2 -->
-        <div class="col-md-4">
-          <div class="service-card">
-            <h3 class="text-success">
-              <i class="fas fa-clinic-medical"></i> Specialty Clinics
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
-              lectus purus.
-            </p>
-          </div>
-        </div>
-        <!-- Service Card 3 -->
-        <div class="col-md-4">
-          <div class="service-card">
-            <h3 class="text-danger">
-              <i class="fas fa-procedures"></i> Surgical Services
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
-              lectus purus.
-            </p>
-          </div>
-        </div>
+        {% empty %}
+        No Services or Data Found
+        {% endfor %} 
       </div>
-      {% endcomment %} {% comment %}
-      <div class="row">
-        <!-- Service Card 4 -->
-        <div class="col-md-4">
-          <div class="service-card">
-            <h3 class="text-warning">
-              <i class="fas fa-wheelchair"></i> Rehabilitation
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
-              lectus purus.
-            </p>
-          </div>
-        </div>
-        <!-- Service Card 5 -->
-        <div class="col-md-4">
-          <div class="service-card">
-            <h3 class="text-info">
-              <i class="fas fa-flask"></i> Laboratory Services
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
-              lectus purus.
-            </p>
-          </div>
-        </div>
-        <!-- Service Card 6 -->
-        <div class="col-md-4">
-          <div class="service-card">
-            <h3 class="text-secondary">
-              <i class="fas fa-x-ray"></i> Radiology
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at
-              lectus purus.
-            </p>
-          </div>
-        </div>
-      </div>
-      {% endcomment %}
-    </div>
+      <nav aria-label="...">
+        <ul class="pagination">
+          {% if serviceData.has_previous %}
+            
+
+            <li class="page-item ">
+            <a class="page-link" href="/services?page={{serviceData.previous_page_number}}" tabindex="-1">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="/services?page=1">First</a></li>
+          {% endif %}
+          <li class="page-item"><a class="page-link" href="/services?page=1">1</a></li>
+          <li class="page-item">
+            <a class="page-link" href="/services?page=2">2 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="/services?page=3">3</a></li>
+          {% if serviceData.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="/services?page={{serviceData.next_page_number}}">Next</a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript for search functionality -->
+    {% comment %} <script>
+      $(document).ready(function () {
+        $("#searchInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $(".service-card").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script> {% endcomment %}
   </body>
 </html>
 

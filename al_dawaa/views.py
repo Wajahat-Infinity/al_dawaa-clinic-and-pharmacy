@@ -1,6 +1,7 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 from services.models import service
+from django.core.paginator import Paginator
 def homePage(request):
                 data={
                     'title':'Al-Dawaa',
@@ -35,11 +36,20 @@ def contact(request):
                     return render(request,"contact.html",data)
 def services(request):
                     serviceData=service.objects.all()[:6]
+                    paginator=Paginator(serviceData,6)
+                    page_number = request.GET.get('page')
+                    serviceDataFinal = paginator.get_page(page_number)
+
+
+                    if request.method == "GET":
+                        st=request.GET.get('servicename')
+                        if st != None:
+                            serviceData=service.objects.filter(service_title__icontains=st)
+
                     
                     data={
                         'title':'Al-Dawaa',
-                        'serviceData':serviceData,
-
+                        'serviceData':serviceDataFinal,
                     }
                     return render(request,"services.html",data)
 def news(request):
