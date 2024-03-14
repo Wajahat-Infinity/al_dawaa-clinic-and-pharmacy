@@ -35,10 +35,11 @@ def contact(request):
                     }
                     return render(request,"contact.html",data)
 def services(request):
-                    serviceData=service.objects.all()[:6]
-                    paginator=Paginator(serviceData,6)
+                    serviceData=service.objects.all()
+                    paginator=Paginator(serviceData,3)
                     page_number = request.GET.get('page')
                     serviceDataFinal = paginator.get_page(page_number)
+                    totalPages=serviceDataFinal.paginator.num_pages
 
 
                     if request.method == "GET":
@@ -50,6 +51,8 @@ def services(request):
                     data={
                         'title':'Al-Dawaa',
                         'serviceData':serviceDataFinal,
+                        'lastpage':totalPages,
+                        'totalpageList':[n+1 for n in range(totalPages)],
                     }
                     return render(request,"services.html",data)
 def news(request):
