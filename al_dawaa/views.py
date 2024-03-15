@@ -1,6 +1,9 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 from services.models import service
+from news.models import News
+from about.models import About
+
 from django.core.paginator import Paginator
 def homePage(request):
                 data={
@@ -13,13 +16,12 @@ def homePage(request):
                 }
                 return render(request,"index.html",data)
 def aboutUs(request):
+                aboutData=About.objects.all()
+
                 data={
                     'title':'Al-Dawaa',
-                    'overview':'Our mission is to diagnose of disease and its treatment like other hospitals along these, our HOSPITAL gives free treatment and medicine for needy and helpless people.We also keep medical-camps along with our team and well qualified doctors and experts in differnt hard and remote areas ,where normally basic medical facilities are not available. We feel pleasure by doing our work',
-                    'deptList':[{'name':'General Physician' , 'icon':'bi bi-capsule'},
-                                {'name':'Ophthalmologist' , 'icon':'bi bi-eye'},
-                                {'name':'Cardiologist' , 'icon':'bi bi-heart-pulse-fill'},
-                                {'name':'Online appointment' , 'icon':'bi bi-calendar2-plus-fill'},],
+                    'aboutData':aboutData
+                  
                 }
                 return render(request, "about.html",data) 
 def contact(request):
@@ -56,8 +58,11 @@ def services(request):
                     }
                     return render(request,"services.html",data)
 def news(request):
+                    newsData=News.objects.all()
+
                     data={
                         'title':'Al-Dawaa',
+                        'newsData':newsData,
                     }
                     return render(request,"news.html",data)
 def freeTreatment(request):

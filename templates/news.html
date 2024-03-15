@@ -34,59 +34,22 @@
       <h1 class="text-center mt-5 mb-4">News & Blogs</h1>
       <div class="row">
         <!-- News Card 1 -->
+        {% for n in newsData %}
         <div class="col-md-4">
           <div class="card news-card">
             <img
-              src="https://via.placeholder.com/400x200"
-              class="card-img-top"
+              src="/media/{{n.news_image}}"
+              class="card-img-top img_fluid"
               alt="News Image"
             />
             <div class="card-body">
-              <h5 class="card-title">Latest Update</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                eget velit at urna viverra tincidunt sit amet et ex.
-              </p>
+              <h5 class="card-title">{{n.news_title}}</h5>
+              <p class="card-text">{{n.news_details | safe}}</p>
               <a href="#" class="btn btn-primary">Read More</a>
             </div>
           </div>
         </div>
-        <!-- News Card 2 -->
-        <div class="col-md-4">
-          <div class="card news-card">
-            <img
-              src="https://via.placeholder.com/400x200"
-              class="card-img-top"
-              alt="News Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Health Tips</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                eget velit at urna viverra tincidunt sit amet et ex.
-              </p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- News Card 3 -->
-        <div class="col-md-4">
-          <div class="card news-card">
-            <img
-              src="https://via.placeholder.com/400x200"
-              class="card-img-top"
-              alt="News Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Healthy Living</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                eget velit at urna viverra tincidunt sit amet et ex.
-              </p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
 

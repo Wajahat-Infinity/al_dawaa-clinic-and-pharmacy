@@ -71,33 +71,12 @@
         <div class="col-md-12">
           <div class="about-section text-center">
             <h1 class="mb-4">About Our Hospital</h1>
+            {% for n in aboutData %}
             <div class="about-content">
-              <h2>Welcome to Our Hospital</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                convallis mauris et felis volutpat, sed volutpat dui posuere.
-                Vestibulum eget orci et ante luctus fringilla ac id sapien. Cras
-                nec dictum nunc. Sed et dictum ligula. Integer eu purus eget
-                velit luctus efficitur. Morbi euismod ligula id eros aliquet,
-                nec posuere lorem luctus. Duis ac turpis nec ipsum vestibulum
-                tristique et eget libero. Curabitur non tellus justo. Nullam vel
-                tincidunt lacus.
-              </p>
-              <p>
-                Mauris ac mauris sapien. Nulla varius felis non eros tristique,
-                ut congue sapien venenatis. Proin quis accumsan elit. Ut euismod
-                odio vel nisi faucibus, in vehicula dui sodales. Sed consequat
-                mi at purus accumsan eleifend. Suspendisse nec bibendum nisi.
-                Vivamus bibendum interdum lectus at sollicitudin.
-              </p>
-              <p>
-                Quisque pretium interdum justo, at finibus nulla laoreet eget.
-                Nulla pharetra quam non justo commodo, in fermentum eros
-                sodales. In vitae mauris id mauris viverra vehicula. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere
-                cubilia curae; Integer auctor placerat suscipit.
-              </p>
+              <h2>{{n.about_title}}</h2>
+              <p>{{n.about_des}}</p>
             </div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -109,6 +88,7 @@
         </div>
       </div>
       <div class="row justify-content-center">
+        {% for n in aboutData %}
         <div class="col-md-3">
           <div class="team-member text-center">
             <img
@@ -116,32 +96,11 @@
               alt="Team Member"
               class="img-fluid"
             />
-            <h3>Dr. Ali</h3>
-            <p>Cardiologist</p>
+            <h3>{{n.aboutDoc_name}}</h3>
+            <p>{{n.aboutDoc_specialization}}</p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="team-member text-center">
-            <img
-              src="/static/images/dr2.jpg"
-              alt="Team Member"
-              class="img-fluid"
-            />
-            <h3>Dr. waju</h3>
-            <p>Neurologist</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="team-member text-center">
-            <img
-              src="/static/images/dr2.jpg"
-              alt="Team Member"
-              class="img-fluid"
-            />
-            <h3 >Dr. hussain</h3>
-            <p>Surgeon</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
 

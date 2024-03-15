@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from al_dawaa import views
-
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('',views.homePage),
@@ -30,9 +31,8 @@ urlpatterns = [
     path('news', views.news),
     path('subFreeTreatmentform/', views.subFreeTreatmentform),
     # path('subFreeTreatmentform/', views.homeHeader),
-
-
-
-
-
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  
+    
+    
