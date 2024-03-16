@@ -3,7 +3,7 @@ from django.shortcuts import render
 from services.models import service
 from news.models import News
 from about.models import About
-
+from contact.models import Contact
 from django.core.paginator import Paginator
 def homePage(request):
                 data={
@@ -24,8 +24,7 @@ def aboutUs(request):
                   
                 }
                 return render(request, "about.html",data) 
-def contact(request):
-                return HttpResponse("<b>contact page</b>")
+
 
 def contactNum(request,ph):                
                     return HttpResponse(ph)
@@ -36,6 +35,18 @@ def contact(request):
                         'title':'Al-Dawaa',
                     }
                     return render(request,"contact.html",data)
+def contactSave(request):
+                 
+                if request.method == "POST":
+                                     contact_name=request.POST.get('contact_name');
+                                     contact_email=request.POST.get('contact_email');
+                                     contact_message=request.POST.get('contact_message');
+                                     saveContact=Contact(contact_name=contact_name,contact_email=contact_email,contact_message=contact_message)
+                                     saveContact.save() 
+                                    
+
+                return render(request,"contact.html")
+
 def services(request):
                     serviceData=service.objects.all()
                     paginator=Paginator(serviceData,3)
