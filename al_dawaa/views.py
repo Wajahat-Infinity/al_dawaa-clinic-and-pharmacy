@@ -113,3 +113,10 @@ def subFreeTreatmentform(request):
                         'name':name,
                     }
                     return render(request,"subFreeTreatmentform.html",data)
+def onlineOppointment(request):
+
+                data={
+                    'title':'Al-Dawaa',
+                  
+                }
+                return render(request, "onlineOppointment.html") 
