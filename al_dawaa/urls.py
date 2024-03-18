@@ -30,6 +30,8 @@ urlpatterns = [
     path('services', views.services),
     path('news', views.news),
     path('subFreeTreatmentform/', views.subFreeTreatmentform),
+    path('onlineOppointment', views.onlineOppointment),
+
     # path('subFreeTreatmentform/', views.homeHeader),
 ]
 if settings.DEBUG:
