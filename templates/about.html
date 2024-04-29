@@ -88,11 +88,11 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        {% for n in aboutData %}
+        {% for n in doctorsData %}
         <div class="col-md-3">
           <div class="team-member text-center">
             <img
-              src="/static/images/dr.jpg"
+              src="/media/{{n.aboutDoc_image}}"
               alt="Team Member"
               class="img-fluid"
             />
