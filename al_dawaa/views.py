@@ -4,6 +4,7 @@ from services.models import service
 from news.models import News
 from about.models import About
 from contact.models import Contact
+from doctors.models import Doctors
 from django.core.paginator import Paginator
 def homePage(request):
                 data={
@@ -17,15 +18,25 @@ def homePage(request):
                 return render(request,"index.html",data)
 def aboutUs(request):
                 aboutData=About.objects.all()
+                doctorsData=Doctors.objects.all()
 
                 data={
                     'title':'Al-Dawaa',
-                    'aboutData':aboutData
+                    'aboutData':aboutData,
+                    'doctorsData':doctorsData,
                   
                 }
                 return render(request, "about.html",data) 
 
+# def doctors(request):
+#                 doctorsData=About.objects.all()
 
+#                 data={
+#                     'title':'Al-Dawaa',
+#                     'doctorsData':doctorsData
+                  
+#                 }
+#                 return render(request, "about.html",data)
 def contactNum(request,ph):                
                     return HttpResponse(ph)
                     
