@@ -51,8 +51,3 @@ Implement various clinic management features.
 Enhance UI/UX and interactivity.
 Explore integrating additional databases and technologies.
 Deploy to a production environment.
-Additional Notes:
-
-This README file is a starting point and may need updates as the project progresses.
-Consider adding screenshots or demo videos to showcase the project's current state.
-Feel free to adapt this template to your specific project details and requirements.
